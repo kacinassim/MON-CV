@@ -1,0 +1,159 @@
+/* Variables de couleurs */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --light-gray: #eef2f3;
+}
+
+/* Style général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+h1 { 
+    margin: 0; 
+    color: var(--primary-color); 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Section À Propos */
+.about-me {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-left: 5px solid var(--accent-color);
+    margin-bottom: 30px;
+    border-radius: 0 5px 5px 0;
+}
+
+.about-me h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: none;
+}
+
+/* Structure en colonnes */
+main {
+    display: flex;
+    gap: 40px;
+}
+
+.main-content {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+/* Détails des sections */
+h2 {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.item {
+    margin-bottom: 25px;
+}
+
+.item h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.university {
+    margin: 2px 0;
+    color: #444;
+}
+
+.date {
+    font-weight: bold;
+    color: #888;
+    font-size: 0.85em;
+}
+
+.location {
+    font-style: italic;
+    color: #888;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Compétences (Badges) */
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background: var(--primary-color);
+    color: white;
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+}
